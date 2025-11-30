@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./lib.css" />
+    <title>Library System</title>
+  </head>
+  <body>
+    <dialog id="description">
+      <p>
+        📖 Welcome to My Book LibraryThis application lets you easily manage
+        your personal reading list. To get started, click the Register New Book
+        button to open the entry form. Fill in the Title, Author, and Page
+        Number, and use the Is Read toggle to mark if you've finished the book.
+        Click Submit to add the book to your shelf. Once a book is on the shelf,
+        you can use the central Toggle Button (Read $\leftrightarrow$ Not Read)
+        to quickly update its status. If you need to fix a detail, click 📝Edit
+        to update the information, or use 🗑️Delete to permanently remove the
+        book from the library. Press Cancel at any time to close the form
+        without saving.
+      </p>
+      <button type="button" id="closeDialogButton">Cancel</button>
+    </dialog>
+    <div class="container">
+      <div class="head"><h1>Wel Common To Abela's Odin Library</h1></div>
+
+      <div class="operations">
+        <button id="register">New Book 🔖</button>
+      </div>
+      <dialog id="formDialog">
+        <h2>Enter Your Details</h2>
+
+        <form id="detailsForm" method="dialog">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required /><br /><br />
+
+          <label for="author">Author:</label>
+          <input type="text" id="author" name="author" required /><br /><br />
+
+          <label for="pages">Pages:</label>
+          <input type="number" id="pages" name="pages" required /><br /><br />
+
+          <!-- Toggle -->
+          <label class="toggle-container">
+            <span>Is Read</span>
+            <input type="checkbox" id="isReadToggle" />
+          </label>
+          <br /><br />
+
+          <button type="submit" id="submitButton">Submit</button>
+          <button type="button" id="closeDialogButton">Cancel</button>
+        </form>
+      </dialog>
+      <div class="cards" id="bookList"></div>
+    </div>
+
+    <script src="./lib.js"></script>
+  </body>
+</html>

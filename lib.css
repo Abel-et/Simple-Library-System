@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(235, 226, 226);
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+}
+.head {
+  margin-top: 30px;
+  padding: 30px;
+  width: 800px;
+  border-radius: 10px;
+  margin: 30px auto;
+}
+.operations {
+  margin: 30px auto;
+  padding: 30px;
+  width: 800px;
+  display: flex;
+  align-items: center;
+  justify-items: normal;
+}
+#register {
+  margin-right: 40px;
+}
+#description{
+  width: 600px;
+  height: 400px;
+ 
+}
+#description>p{
+  margin: 40px 0;
+  text-indent: 40px;
+  text-rendering: geometricPrecision;
+}
+#description>button{
+  /* padding: 0 auto; */
+  margin: 0 auto;
+  color: black;
+  margin-left: 40%;
+}
+button {
+  width: 100px;
+  height: 40px;
+  color: #1bc0e9;
+  border: none;
+  font-weight: 600;
+  border-radius: 15px;
+  box-shadow: 3px 3px 2px gray;
+}
+
+.cards {
+  width: 80%;
+  /* height: 100vh; */
+  border: 2px solid rgb(236, 234, 234);
+  padding: 20px;
+  margin: auto auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 5px;
+  box-shadow: -5px -5px 10px gray;
+}
+
+.book-card {
+  background-color: white;
+  height: 250px;
+  width: 300px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: 5px 5px 10px gray;
+}
+.book-card > h3 {
+  height: 80px;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 50px;
+  background-color: #3d4a5d;
+}
+.book-card > button {
+  height: 30px;
+  margin: 10px 0;
+}
+h1 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #0d47a1, #8e24aa, #d81b60);
+  -webkit-background-clip: text;
+  color: transparent;
+
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+
+  border-right: 2px solid #333;
+  animation: typing 6s steps(30), erase 6s 6s steps(30),
+    blink 0.75s step-end infinite;
+  animation-iteration-count: infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes erase {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+dialog {
+  background-color: rgb(250, 244, 244);
+  color: rgb(13, 13, 13);
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: 2px solid #ff00cc;
+  padding: 10px;
+  z-index: 4;
+  padding: 2rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin: auto auto;
+}
+
+/* Styles the area outside the dialog when open */
+dialog::backdrop {
+  background-color: rgba(21, 19, 19, 0.5);
+}
