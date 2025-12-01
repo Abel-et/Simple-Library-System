@@ -5,6 +5,7 @@ const cancel = document.getElementById('closeDialogButton')
 const form = document.getElementById('detailsForm')
 const des = document.getElementById("description")
 
+
 // 1. Accessing the specific input fields via their IDs
 const title = document.getElementById('title')
 const author = document.getElementById('author')
@@ -65,8 +66,10 @@ function renderBook(){
     <hr>
     `
     container.appendChild(card)
-card.querySelector('.toggle-btn').addEventListener('click',()=>{
-  checker(book.id)
+ const btn = card.querySelector('.toggle-btn')
+  btn.addEventListener('click',()=>{
+  checker(btn)
+  console.log(book.title)
 })
  card.querySelector('.edit-button').addEventListener('click',()=>{
   handleEdit(book.id);
@@ -78,14 +81,15 @@ card.querySelector('.toggle-btn').addEventListener('click',()=>{
 }
 
 // a toggle button that can change if the book is readded after registered
-function checker(id){
+function checker(btn){
+  const id = btn.dataset.id
   const book = shelf.find(b => b.id == id)
-  let check = document.querySelector('.toggle-btn').textContent
-  if(check.includes('❌')){
-    document.querySelector('.toggle-btn').textContent = "Read ✔️";
+
+  if(btn.textContent.includes('❌')){
+    btn.textContent = "Read ✔️";
     book.isRead = true
   }else{
-    document.querySelector('.toggle-btn').textContent = "Not Read ❌";
+    btn.textContent = "Not Read ❌";
     book.isRead = false
   }
 }
@@ -114,9 +118,10 @@ newBook.addEventListener('click',()=>{
 
 // used to cancel the dialog
 cancel.addEventListener('click',()=>{dialog.close()
-  des.close()
 })
-
+document.getElementById('closeDialog').addEventListener('click',()=>{
+  des.close();
+})
 //  used to save the enter input
 submit.addEventListener('click',(event)=>{
   if(!title.value || !author.value || !page.value){

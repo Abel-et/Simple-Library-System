@@ -27,17 +27,16 @@ body {
 #register {
   margin-right: 40px;
 }
-#description{
+#description {
   width: 600px;
   height: 400px;
- 
 }
-#description>p{
+#description > p {
   margin: 40px 0;
   text-indent: 40px;
   text-rendering: geometricPrecision;
 }
-#description>button{
+#description > button {
   /* padding: 0 auto; */
   margin: 0 auto;
   color: black;
@@ -61,7 +60,7 @@ button {
   margin: auto auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 5px;
+  gap: 30px;
   box-shadow: -5px -5px 10px gray;
 }
 
@@ -74,6 +73,7 @@ button {
   flex-direction: column;
   gap: 5px;
   box-shadow: 5px 5px 10px gray;
+  margin: 0px 30px;
 }
 .book-card > h3 {
   height: 80px;
